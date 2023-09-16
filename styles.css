@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+#wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navBar {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.1rem;
+}
+
+.logo-container {
+    object-position: center;
+    object-fit: cover;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    border-radius: 50%;
+}
+
+.nav-item {
+    display: flex;
+    height: 100%;
+    gap: 2rem;
+    /* padding: 4em; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    margin: 0 12px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-item div a:hover {
+    transition: all 0.8s;
+    font-weight: bold;
+}
+
+/* ---------------------------Hero Section------------------------ */
+.hero-section {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+    gap: 5rem;
+}
+
+.faded-text {
+    position: absolute;
+    user-select: none;
+    font-size: 7em;
+    font-weight: bold;
+    bottom: -30px;
+    left: 0;
+    color: rgb(231, 231, 231);
+    transition: all 3s;
+}
+
+.hero-section-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-title {
+    font-size: 35px;
+    font-weight: 500;
+    color: #343d68;
+}
+
+#job-title {
+    font-weight: bold;
+    color: #343d68;
+    animation: changeJobTitle 8s linear infinite;
+}
+
+@keyframes changeJobTitle {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+.hero-subtitle {
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.hero-description {
+    font-weight: 500;
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.hero-heading {
+    font-family: "Kosugi Maru", sans-serif;
+    font-size: 36px;
+    color: #ff5733;
+    /* Adjust the color as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Add a subtle text shadow */
+    letter-spacing: 2px;
+    /* Adjust letter spacing as needed */
+}
+
+.outerlayer {
+    background-color: #343d68;
+    padding: 10px;
+    height: 70px;
+    width: 270px;
+}
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+}
+
+.btn-outerlayer>a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-outerlayer {
+    color: #fff;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.btn-outerlayer span {
+    transition: all 0.3s;
+}
+
+.btn-outerlayer::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    transform: scale(0.1, 1);
+}
+
+.btn-outerlayer:hover span {
+    letter-spacing: 2px;
+}
+
+.btn-outerlayer:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.btn-outerlayer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outerlayer:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+.hero-section-right {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.user-image {
+    padding: 2.5rem;
+    box-shadow: 0 0 40px #1f1f1f;
+    z-index: -1;
+}
+
+.projects {
+    background-color: rgb(231, 231, 231);
+    padding: 4rem 0;
+}
+
+.project-heading {
+    font-size: 90px;
+    color: #343d68;
+    text-align: center;
+    font-weight: bold;
+    padding: 30px 0;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 120px;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.project1 {
+    background-image: url(./images//projects/project-1.png);
+}
+
+.project2 {
+    background-image: url(./images//projects/project-2.png);
+}
+
+.project3 {
+    background-image: url(./images//projects/project-3.png);
+}
+
+.project4 {
+    background-image: url(./images//projects/project-4.png);
+}
+
+.project-card {
+    width: 90%;
+    position: relative;
+    height: 550px;
+    background-size: cover;
+    box-shadow: 0 0 40px #1f1f1f;
+    transition: all 200ms;
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    transform: scale(1);
+    z-index: 0;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: linear-gradient(45deg,
+            rgba(52, 61, 104, 0.7),
+            rgba(52, 61, 104, 0.5),
+            rgba(52, 61, 104, 0.3));
+    transition: all 500ms;
+    z-index: 1;
+}
+
+.project-card:hover::before {
+    width: 100%;
+}
+
+.project-num {
+    display: none;
+    font-size: 200px;
+    position: absolute;
+    font-weight: 600;
+    color: white;
+    z-index: 10;
+}
+
+.project-card:hover .project-num {
+    display: block;
+}
+
+.left-project-card {
+    align-self: self-start;
+}
+
+.right-project-card {
+    align-self: self-end;
+}
+
+.project-num-right {
+    right: -5%;
+    top: -10%;
+}
+
+.project-num-left {
+    left: -5%;
+    top: -10%;
+}
+
+.project-content {
+    position: absolute;
+    width: 75%;
+    color: white;
+    z-index: 5;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    padding-left: 4em;
+    gap: 1em;
+    transition: all 0.5s;
+}
+
+.project-content-left {
+    left: 5%;
+}
+
+.project-content-right {
+    right: -20%;
+}
+
+.project-skills-container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-skills {
+    width: 40px;
+}
+
+.project-title {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-description {
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.btn-group {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+
+.icon {
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.icon:hover {
+    color: crimson;
+}
+
+.project-card:hover .project-content {
+    transform: scale(1.1);
+}
+
+.skill-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 5em;
+    margin: 10rem auto;
+}
+
+.skill-faded-text {
+    position: absolute;
+    font-size: 7em;
+    font-weight: bold;
+    user-select: none;
+    color: rgb(231, 231, 231);
+    bottom: -25%;
+    right: -5%;
+    transition: all 3s;
+}
+
+.skill-container-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-heading {
+    font-size: 50px;
+    color: crimson;
+    font-style: bold;
+}
+
+.cap {
+    font-size: 90px;
+}
+
+.skill-description {
+    margin-top: 1rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-container-right {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 100%;
+    gap: 1rem;
+}
+
+.blob-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: blobAnimation 3s linear infinite;
+}
+
+.skills-logo {
+    width: 90px;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.skills-logo:hover {
+    transform: scale(1.1);
+}
+
+#contact {
+    background-color: #343d68;
+    color: white;
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-subheading {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background-color: transparent;
+    color: white;
+}
+
+.input-field::placeholder {
+    color: #ffffff;
+}
+
+textarea.input-field {
+    resize: vertical;
+}
+
+.contact-outerlayer {
+    text-align: center;
+}
+
+.contact-btn-outerlayer {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #343d68;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-btn-outerlayer:hover {
+    background-color: white;
+    color: #343d68;
+    border-color: #343d68;
+}
+
+#footer {
+    width: 100%;
+    background-color: #343d68;
+    position: relative;
+}
+
+.footer-div {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    margin-bottom: 7rem;
+}
+
+.footer-item {
+    display: flex;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+.footer-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-icons {
+    font-size: 2rem;
+    display: flex;
+    gap: 1rem;
+    color: white;
+    transition: all 200ms;
+}
+
+.footer-item a:hover {
+    color: crimson;
+}
+
+.icons {
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+.icons:hover {
+    color: crimson;
+}
+
+.footer-faded-text {
+    user-select: none;
+    font-weight: bold;
+    color: rgba(231, 231, 231, 0.301);
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    font-size: 5em;
+}
+
+.social-icons>a {
+    text-decoration: none;
+    color: white;
+}
